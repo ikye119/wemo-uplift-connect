@@ -17,26 +17,31 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* WEMO Brand Colors */
+    --primary: 278 58% 38%; /* #753A88 - Purple */
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 338 73% 48%; /* #CC2B5E - Crimson Pink */
+    --secondary-foreground: 0 0% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 278 58% 95%; /* Light purple accent */
+    --accent-foreground: 278 58% 38%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 278 58% 38%;
 
-    --radius: 0.5rem;
+    /* Custom WEMO gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(278 58% 38%), hsl(338 73% 48%));
+    --gradient-hero: linear-gradient(135deg, hsl(278 58% 38% / 0.9), hsl(338 73% 48% / 0.9));
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
