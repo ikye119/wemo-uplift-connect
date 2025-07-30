@@ -61,26 +61,26 @@ const Donate = () => {
     {
       icon: BookOpen,
       title: "Education & Skills",
-      description: "$50 can provide educational materials for 5 women",
-      amount: "$50"
+      description: "₦20,000 can provide educational materials for 5 women",
+      amount: "₦20,000"
     },
     {
       icon: Users,
       title: "Community Programs",
-      description: "$100 can fund a week of community outreach activities",
-      amount: "$100"
+      description: "₦40,000 can fund a week of community outreach activities",
+      amount: "₦40,000"
     },
     {
       icon: Shield,
       title: "Safe Spaces",
-      description: "$250 can help establish a safe space for women in need",
-      amount: "$250"
+      description: "₦100,000 can help establish a safe space for women in need",
+      amount: "₦100,000"
     },
     {
       icon: Heart,
       title: "Healthcare Access",
-      description: "$500 can provide healthcare support for 10 women",
-      amount: "$500"
+      description: "₦200,000 can provide healthcare support for 10 women",
+      amount: "₦200,000"
     }
   ];
 
@@ -92,8 +92,9 @@ const Donate = () => {
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-background to-secondary/10">
         {/* Header */}
-        <section className="bg-gradient-to-r from-primary to-secondary text-white py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="bg-gradient-to-r from-primary to-secondary text-white py-16 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-black-accent"></div>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Make a Difference Today
             </h1>
@@ -117,8 +118,8 @@ const Donate = () => {
               {impactAreas.map((area, index) => (
                 <Card 
                   key={index} 
-                  className="hover:shadow-lg transition-all cursor-pointer"
-                  onClick={() => setAmount(area.amount.replace('$', ''))}
+                  className="hover:shadow-lg transition-all cursor-pointer border border-black-accent-light/10 hover:border-black-accent-light/20"
+                  onClick={() => setAmount(area.amount.replace('₦', '').replace(',', ''))}
                 >
                   <CardHeader className="text-center">
                     <div className="mx-auto p-3 bg-primary/10 rounded-full w-fit">
@@ -148,29 +149,29 @@ const Donate = () => {
               </p>
             </div>
 
-            <Card>
+            <Card className="border border-black-accent-light/10 shadow-black-accent">
               <CardContent className="p-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Amount Selection */}
                   <div className="space-y-4">
                     <Label className="text-lg">Donation Amount</Label>
                     <div className="grid grid-cols-4 gap-3">
-                      {['25', '50', '100', '250'].map((amount) => (
+                      {['10000', '20000', '40000', '100000'].map((amount) => (
                         <Button
                           key={amount}
                           type="button"
                           variant={donationData.amount === amount ? "default" : "outline"}
                           onClick={() => setAmount(amount)}
-                          className="h-12"
+                          className="h-12 shadow-sm hover:shadow-md transition-shadow"
                         >
-                          ${amount}
+                          ₦{parseInt(amount).toLocaleString()}
                         </Button>
                       ))}
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="custom-amount">Custom Amount</Label>
                       <div className="relative">
-                        <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground">$</span>
+                        <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground">₦</span>
                         <Input
                           id="custom-amount"
                           name="amount"
@@ -181,7 +182,7 @@ const Donate = () => {
                           onChange={handleChange}
                           required
                           placeholder="0.00"
-                          className="pl-8"
+                          className="pl-8 border-black-accent-light/20 focus:border-black-accent-light/40"
                         />
                       </div>
                     </div>
@@ -248,7 +249,7 @@ const Donate = () => {
                       className="w-full h-12 text-lg" 
                       disabled={isSubmitting}
                     >
-                      {isSubmitting ? "Processing..." : `Donate $${donationData.amount || '0'}`}
+                      {isSubmitting ? "Processing..." : `Donate ₦${donationData.amount ? parseInt(donationData.amount).toLocaleString() : '0'}`}
                     </Button>
                   </div>
                 </form>

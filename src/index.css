@@ -24,6 +24,11 @@ All colors MUST be HSL.
     --secondary: 338 73% 48%; /* #CC2B5E - Crimson Pink */
     --secondary-foreground: 0 0% 98%;
 
+    /* Black accent touches */
+    --black-accent: 0 0% 0%; /* Pure black for accents */
+    --black-accent-light: 0 0% 15%; /* Dark gray for subtle touches */
+    --black-accent-foreground: 0 0% 98%;
+
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
@@ -40,6 +45,11 @@ All colors MUST be HSL.
     /* Custom WEMO gradients */
     --gradient-primary: linear-gradient(135deg, hsl(278 58% 38%), hsl(338 73% 48%));
     --gradient-hero: linear-gradient(135deg, hsl(278 58% 38% / 0.9), hsl(338 73% 48% / 0.9));
+    --gradient-black-accent: linear-gradient(135deg, hsl(0 0% 0% / 0.1), hsl(0 0% 15% / 0.1));
+    
+    /* Black accent shadows */
+    --shadow-black-accent: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    --shadow-black-deep: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
 
     --radius: 0.75rem;
 
