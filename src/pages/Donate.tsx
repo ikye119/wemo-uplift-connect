@@ -14,7 +14,7 @@ const Donate = () => {
     amount: "",
     name: "",
     email: "",
-    payment_method: "credit_card"
+    payment_method: "bank_transfer"
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -38,7 +38,7 @@ const Donate = () => {
         description: "Your donation has been recorded. We'll send you a receipt via email.",
       });
 
-      setDonationData({ amount: "", name: "", email: "", payment_method: "credit_card" });
+      setDonationData({ amount: "", name: "", email: "", payment_method: "bank_transfer" });
     } catch (error) {
       toast({
         title: "Error",
@@ -218,23 +218,15 @@ const Donate = () => {
                   {/* Payment Method */}
                   <div className="space-y-4">
                     <Label className="text-lg">Payment Method</Label>
-                    <RadioGroup 
-                      value={donationData.payment_method} 
-                      onValueChange={(value) => setDonationData(prev => ({ ...prev, payment_method: value }))}
-                    >
+                    <div className="p-4 bg-primary/5 rounded-lg border border-primary/20">
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="credit_card" id="credit_card" />
-                        <Label htmlFor="credit_card">Credit Card</Label>
+                        <RadioGroupItem value="bank_transfer" id="bank_transfer" checked />
+                        <Label htmlFor="bank_transfer" className="font-medium">Bank Transfer (Only Available Option)</Label>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="paypal" id="paypal" />
-                        <Label htmlFor="paypal">PayPal</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="bank_transfer" id="bank_transfer" />
-                        <Label htmlFor="bank_transfer">Bank Transfer</Label>
-                      </div>
-                    </RadioGroup>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        All donations are processed through bank transfer to our official account.
+                      </p>
+                    </div>
                   </div>
 
                   <div className="border-t pt-6">
