@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+
 import { Heart, Users, BookOpen, Shield } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -220,8 +220,8 @@ const Donate = () => {
                     <Label className="text-lg">Payment Method</Label>
                     <div className="p-4 bg-primary/5 rounded-lg border border-primary/20">
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="bank_transfer" id="bank_transfer" checked />
-                        <Label htmlFor="bank_transfer" className="font-medium">Bank Transfer (Only Available Option)</Label>
+                        <div className="w-4 h-4 rounded-full bg-primary"></div>
+                        <Label className="font-medium">Bank Transfer (Only Available Option)</Label>
                       </div>
                       <p className="text-sm text-muted-foreground mt-2">
                         All donations are processed through bank transfer to our official account.
