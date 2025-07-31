@@ -60,26 +60,26 @@ const Donate = () => {
   const impactAreas = [
     {
       icon: BookOpen,
-      title: "Education & Skills",
-      description: "₦20,000 can provide educational materials for 5 women",
+      title: "Bible & Education",
+      description: "₦20,000 can provide Bibles and educational materials for 5 people",
       amount: "₦20,000"
     },
     {
       icon: Users,
-      title: "Community Programs",
-      description: "₦40,000 can fund a week of community outreach activities",
+      title: "Evangelism Programs",
+      description: "₦40,000 can fund a week of evangelism and outreach activities",
       amount: "₦40,000"
     },
     {
       icon: Shield,
-      title: "Safe Spaces",
-      description: "₦100,000 can help establish a safe space for women in need",
+      title: "Church Planting",
+      description: "₦100,000 can help establish a new church in unreached areas",
       amount: "₦100,000"
     },
     {
       icon: Heart,
-      title: "Healthcare Access",
-      description: "₦200,000 can provide healthcare support for 10 women",
+      title: "Mission Support",
+      description: "₦200,000 can support missionaries for a full month",
       amount: "₦200,000"
     }
   ];
@@ -99,7 +99,7 @@ const Donate = () => {
               Make a Difference Today
             </h1>
             <p className="text-xl text-white/90">
-              Your donation directly impacts women's lives around the world
+              Your donation directly impacts souls and communities around the world
             </p>
           </div>
         </section>
@@ -110,7 +110,7 @@ const Donate = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Your Impact in Action</h2>
               <p className="text-lg text-muted-foreground">
-                See how your donation can make a real difference
+                See how your donation can help spread God's love and transform communities
               </p>
             </div>
 
@@ -145,7 +145,7 @@ const Donate = () => {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold mb-4">Complete Your Donation</h2>
               <p className="text-lg text-muted-foreground">
-                Every contribution helps us empower more women worldwide.
+                Every contribution helps us spread God's love and transform more communities worldwide.
               </p>
             </div>
 
@@ -238,12 +238,17 @@ const Donate = () => {
                   </div>
 
                   <div className="border-t pt-6">
-                    <div className="bg-muted/50 p-4 rounded-lg mb-4">
-                      <p className="text-sm text-muted-foreground">
-                        <strong>Note:</strong> This is a demonstration form. In a real implementation, 
-                        this would integrate with a secure payment processor like Stripe or PayPal.
-                      </p>
+                  <div className="bg-muted/50 p-4 rounded-lg mb-4">
+                    <h4 className="font-semibold mb-2">Bank Transfer Details:</h4>
+                    <div className="space-y-1 text-sm">
+                      <p><strong>Account Name:</strong> We Empower Movement</p>
+                      <p><strong>Account Number:</strong> 1025381693</p>
+                      <p><strong>Bank Name:</strong> UBA</p>
                     </div>
+                    <p className="text-sm text-muted-foreground mt-2">
+                      Please send your transfer receipt to wemomission@gmail.com for confirmation.
+                    </p>
+                  </div>
                     <Button 
                       type="submit" 
                       className="w-full h-12 text-lg" 
@@ -258,8 +263,8 @@ const Donate = () => {
 
             <div className="text-center mt-8 text-sm text-muted-foreground">
               <p>
-                WEMO is a registered 501(c)(3) nonprofit organization. 
-                Your donation is tax-deductible to the extent allowed by law.
+                WEMO is a registered religious organization. 
+                Please consult your tax advisor regarding deductibility of donations.
               </p>
             </div>
           </div>

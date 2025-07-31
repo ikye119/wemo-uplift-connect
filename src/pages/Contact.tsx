@@ -23,11 +23,19 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
+      // Insert to database
+      const { error: dbError } = await supabase
         .from('contact_messages')
         .insert([formData]);
 
-      if (error) throw error;
+      if (dbError) throw dbError;
+
+      // Send email via edge function
+      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (emailError) throw emailError;
 
       toast({
         title: "Message Sent!",
@@ -57,7 +65,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "contact@wemo.org",
+      content: "wemomission@gmail.com",
       description: "Send us an email anytime"
     },
     {
@@ -179,7 +187,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-3">General Inquiries</h3>
                     <p className="text-muted-foreground">
-                      Have questions about our programs, impact, or how to get involved? 
+                      Have questions about our ministries, mission, or how to get involved? 
                       We're here to help and would love to connect with you.
                     </p>
                   </div>
@@ -188,7 +196,7 @@ const Contact = () => {
                     <h3 className="text-xl font-semibold mb-3">Partnership Opportunities</h3>
                     <p className="text-muted-foreground">
                       Interested in partnering with WEMO? We're always looking for 
-                      organizations that share our mission of empowering women worldwide.
+                      churches and organizations that share our mission of spreading God's love worldwide.
                     </p>
                   </div>
 

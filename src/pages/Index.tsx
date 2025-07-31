@@ -12,14 +12,14 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              Empowering Women,{" "}
+              Spreading God's Love,{" "}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Transforming Lives
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              WEMO is dedicated to creating opportunities and breaking barriers for women 
-              worldwide through education, advocacy, and community support.
+              World Evangelical Mission Outreach (WEMO) is dedicated to spreading the Gospel 
+              and transforming communities through God's love, education, and outreach programs worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
@@ -43,9 +43,9 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our Mission</h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              To create a world where every woman has equal access to education, economic opportunities, 
-              and the resources needed to reach her full potential. We believe that when women are empowered, 
-              entire communities thrive.
+              To spread the Gospel of Jesus Christ to all nations and transform communities through 
+              God's love. We believe in empowering believers through discipleship, education, and 
+              outreach programs that bring hope and healing to the world.
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ const Index = () => {
               <CardContent className="pt-6">
                 <Users className="mx-auto mb-4 text-primary" size={48} />
                 <h3 className="text-3xl font-bold text-primary mb-2">5,000+</h3>
-                <p className="text-muted-foreground">Women Empowered</p>
+                <p className="text-muted-foreground">Lives Transformed</p>
               </CardContent>
             </Card>
             <Card className="text-center">
@@ -94,8 +94,8 @@ const Index = () => {
             Ready to Make a Difference?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join thousands of women and allies working together to create lasting change. 
-            Every contribution matters, every voice counts.
+            Join thousands of believers working together to spread God's love and transform communities. 
+            Every contribution matters, every prayer counts.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
