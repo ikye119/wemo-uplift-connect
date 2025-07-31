@@ -23,8 +23,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <Link to="/" className="flex-shrink-0 flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/20d3059d-622c-4a99-a465-9ec7021e43f6.png" 
+                alt="WEMO Logo" 
+                className="h-10 w-10"
+              />
+              <span className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 WEMO
               </span>
             </Link>
