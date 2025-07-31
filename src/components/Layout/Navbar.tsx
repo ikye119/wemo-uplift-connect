@@ -27,7 +27,7 @@ const Navbar = () => {
               <img 
                 src="/lovable-uploads/20d3059d-622c-4a99-a465-9ec7021e43f6.png" 
                 alt="WEMO Logo" 
-                className="h-12 w-12"
+                className="h-16 w-16"
               />
               <span className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 WEMO
